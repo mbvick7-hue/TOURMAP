@@ -13,7 +13,7 @@ import re
 import sys
 from pathlib import Path
 
-HTML_PATH = Path(__file__).parent.parent / "tourmap_v3_fixed.html"
+HTML_PATH = Path(__file__).parent.parent / "index.html"
 OUT_PATH  = Path(__file__).parent / "tournament_list.py"
 
 
