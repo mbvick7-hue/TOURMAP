@@ -1,4 +1,720 @@
 {
-  "scraped_at": null,
-  "tournaments": []
+  "scraped_at": "2026-04-14T21:10:10.113008+00:00",
+  "tournaments": [
+    {
+      "id": "h1"
+    },
+    {
+      "id": "h2"
+    },
+    {
+      "id": "h3"
+    },
+    {
+      "id": "h4"
+    },
+    {
+      "id": "h5"
+    },
+    {
+      "id": "h6"
+    },
+    {
+      "id": "h7"
+    },
+    {
+      "id": "h8"
+    },
+    {
+      "id": "h9"
+    },
+    {
+      "id": "h10"
+    },
+    {
+      "id": "h11"
+    },
+    {
+      "id": "h12"
+    },
+    {
+      "id": "h13"
+    },
+    {
+      "id": "h14"
+    },
+    {
+      "id": "h15"
+    },
+    {
+      "id": "h16"
+    },
+    {
+      "id": "h17"
+    },
+    {
+      "id": "h18"
+    },
+    {
+      "id": "h19"
+    },
+    {
+      "id": "h20"
+    },
+    {
+      "id": "h21"
+    },
+    {
+      "id": "h22"
+    },
+    {
+      "id": "h23"
+    },
+    {
+      "id": "h24"
+    },
+    {
+      "id": "h25"
+    },
+    {
+      "id": "h26"
+    },
+    {
+      "id": "h27"
+    },
+    {
+      "id": "t1"
+    },
+    {
+      "id": "t2"
+    },
+    {
+      "id": "t3",
+      "regDeadline": "Registration Open"
+    },
+    {
+      "id": "t4",
+      "regDeadline": "Registration Open"
+    },
+    {
+      "id": "t5",
+      "regDeadline": "Registration Open"
+    },
+    {
+      "id": "t6",
+      "regDeadline": "Registration Open"
+    },
+    {
+      "id": "t7",
+      "regDeadline": "Registration Open"
+    },
+    {
+      "id": "t8"
+    },
+    {
+      "id": "t9"
+    },
+    {
+      "id": "t10"
+    },
+    {
+      "id": "t13"
+    },
+    {
+      "id": "t14"
+    },
+    {
+      "id": "t15"
+    },
+    {
+      "id": "t16"
+    },
+    {
+      "id": "t17"
+    },
+    {
+      "id": "t18"
+    },
+    {
+      "id": "t20",
+      "regDeadline": "Registration Open"
+    },
+    {
+      "id": "t21"
+    },
+    {
+      "id": "t22"
+    },
+    {
+      "id": "t23"
+    },
+    {
+      "id": "t24"
+    },
+    {
+      "id": "t25"
+    },
+    {
+      "id": "t26"
+    },
+    {
+      "id": "t27"
+    },
+    {
+      "id": "t28"
+    },
+    {
+      "id": "t29"
+    },
+    {
+      "id": "t30"
+    },
+    {
+      "id": "t31"
+    },
+    {
+      "id": "t32"
+    },
+    {
+      "id": "t_gj1"
+    },
+    {
+      "id": "t_pw1"
+    },
+    {
+      "id": "t_lk1"
+    },
+    {
+      "id": "t_pk1"
+    },
+    {
+      "id": "t_sp1"
+    },
+    {
+      "id": "t_tt1"
+    },
+    {
+      "id": "t_ab1"
+    },
+    {
+      "id": "t_rb1"
+    },
+    {
+      "id": "t_wm1"
+    },
+    {
+      "id": "t_tl1"
+    },
+    {
+      "id": "t_cc1"
+    },
+    {
+      "id": "t_cb1"
+    },
+    {
+      "id": "t_dd1"
+    },
+    {
+      "id": "t_lm1"
+    },
+    {
+      "id": "t_sw1"
+    },
+    {
+      "id": "t_tl2"
+    },
+    {
+      "id": "t_wc1"
+    },
+    {
+      "id": "t_ew1"
+    },
+    {
+      "id": "t_rc1"
+    },
+    {
+      "id": "t_ry1"
+    },
+    {
+      "id": "t_bp2"
+    },
+    {
+      "id": "t_jc1"
+    },
+    {
+      "id": "t_oh2"
+    },
+    {
+      "id": "cga_hvq"
+    },
+    {
+      "id": "t_al1"
+    },
+    {
+      "id": "t_rp2"
+    },
+    {
+      "id": "t_tv1"
+    },
+    {
+      "id": "t_pk2"
+    },
+    {
+      "id": "t_sas"
+    },
+    {
+      "id": "t_co1"
+    },
+    {
+      "id": "t_wk1"
+    },
+    {
+      "id": "t_nb1"
+    },
+    {
+      "id": "t_tt2"
+    },
+    {
+      "id": "t_tt3"
+    },
+    {
+      "id": "t_zb1"
+    },
+    {
+      "id": "t_tt4"
+    },
+    {
+      "id": "t_br1"
+    },
+    {
+      "id": "t_tk1"
+    },
+    {
+      "id": "t_ta1"
+    },
+    {
+      "id": "t_tg2"
+    },
+    {
+      "id": "t_tsc"
+    },
+    {
+      "id": "s1"
+    },
+    {
+      "id": "s2"
+    },
+    {
+      "id": "s3"
+    },
+    {
+      "id": "s4"
+    },
+    {
+      "id": "s4b"
+    },
+    {
+      "id": "s6"
+    },
+    {
+      "id": "s7"
+    },
+    {
+      "id": "s8"
+    },
+    {
+      "id": "s9"
+    },
+    {
+      "id": "s10"
+    },
+    {
+      "id": "s11"
+    },
+    {
+      "id": "s12"
+    },
+    {
+      "id": "s13"
+    },
+    {
+      "id": "s14"
+    },
+    {
+      "id": "s15"
+    },
+    {
+      "id": "s16"
+    },
+    {
+      "id": "s17"
+    },
+    {
+      "id": "s18"
+    },
+    {
+      "id": "s19"
+    },
+    {
+      "id": "s20"
+    },
+    {
+      "id": "d0a"
+    },
+    {
+      "id": "d0b"
+    },
+    {
+      "id": "d1"
+    },
+    {
+      "id": "d2"
+    },
+    {
+      "id": "d2b"
+    },
+    {
+      "id": "d3"
+    },
+    {
+      "id": "d4"
+    },
+    {
+      "id": "d4b"
+    },
+    {
+      "id": "d5"
+    },
+    {
+      "id": "d6"
+    },
+    {
+      "id": "d7"
+    },
+    {
+      "id": "d7b"
+    },
+    {
+      "id": "d7c"
+    },
+    {
+      "id": "d7e"
+    },
+    {
+      "id": "d7d"
+    },
+    {
+      "id": "d7f"
+    },
+    {
+      "id": "d8"
+    },
+    {
+      "id": "d8b"
+    },
+    {
+      "id": "d9"
+    },
+    {
+      "id": "d10"
+    },
+    {
+      "id": "d11"
+    },
+    {
+      "id": "d12"
+    },
+    {
+      "id": "d13"
+    },
+    {
+      "id": "d14"
+    },
+    {
+      "id": "d14b"
+    },
+    {
+      "id": "d15"
+    },
+    {
+      "id": "d15b"
+    },
+    {
+      "id": "d15c"
+    },
+    {
+      "id": "d16"
+    },
+    {
+      "id": "d16b"
+    },
+    {
+      "id": "d16c"
+    },
+    {
+      "id": "d17"
+    },
+    {
+      "id": "d18"
+    },
+    {
+      "id": "a1"
+    },
+    {
+      "id": "a1q"
+    },
+    {
+      "id": "a2"
+    },
+    {
+      "id": "a2q"
+    },
+    {
+      "id": "a3"
+    },
+    {
+      "id": "a3q"
+    },
+    {
+      "id": "a4"
+    },
+    {
+      "id": "a4q"
+    },
+    {
+      "id": "a5"
+    },
+    {
+      "id": "a5q"
+    },
+    {
+      "id": "a6"
+    },
+    {
+      "id": "a6q"
+    },
+    {
+      "id": "p1"
+    },
+    {
+      "id": "ph1"
+    },
+    {
+      "id": "ph2"
+    },
+    {
+      "id": "ph3"
+    },
+    {
+      "id": "ph4"
+    },
+    {
+      "id": "usk_sc_state"
+    },
+    {
+      "id": "usk_nc_state"
+    },
+    {
+      "id": "usk_world_teen"
+    },
+    {
+      "id": "usk_world"
+    },
+    {
+      "id": "usk_lt1"
+    },
+    {
+      "id": "usk_lt2"
+    },
+    {
+      "id": "usk_lt3"
+    },
+    {
+      "id": "usk_lt4"
+    },
+    {
+      "id": "usk_lt5"
+    },
+    {
+      "id": "usk_lt6"
+    },
+    {
+      "id": "usk_lt7"
+    },
+    {
+      "id": "usk_lt8"
+    },
+    {
+      "id": "usk_lt9"
+    },
+    {
+      "id": "usk_lt10"
+    },
+    {
+      "id": "usk_lt11"
+    },
+    {
+      "id": "usk_lt12"
+    },
+    {
+      "id": "usk_lt13"
+    },
+    {
+      "id": "usk_snh1"
+    },
+    {
+      "id": "usk_snh2"
+    },
+    {
+      "id": "usk_snh3"
+    },
+    {
+      "id": "usk_lt14"
+    },
+    {
+      "id": "usk_lt15"
+    },
+    {
+      "id": "usk_lt16"
+    },
+    {
+      "id": "usk_lt17"
+    },
+    {
+      "id": "usk_enc1"
+    },
+    {
+      "id": "usk_enc2"
+    },
+    {
+      "id": "usk_enc3"
+    },
+    {
+      "id": "usk_lt18"
+    },
+    {
+      "id": "usk_lt19"
+    },
+    {
+      "id": "usk_lt20"
+    },
+    {
+      "id": "cga_hv3main"
+    },
+    {
+      "id": "cga_hv3q1"
+    },
+    {
+      "id": "cga_hv3q2"
+    },
+    {
+      "id": "cga_scmp"
+    },
+    {
+      "id": "t11"
+    },
+    {
+      "id": "cga_ncq1"
+    },
+    {
+      "id": "cga_ncq2"
+    },
+    {
+      "id": "cga_ncq3"
+    },
+    {
+      "id": "cga_ncq4"
+    },
+    {
+      "id": "t12"
+    },
+    {
+      "id": "cga_cjbq1"
+    },
+    {
+      "id": "cga_cjbq2"
+    },
+    {
+      "id": "cga_cjbq3"
+    },
+    {
+      "id": "cga_cjbq4"
+    },
+    {
+      "id": "cga_usja1"
+    },
+    {
+      "id": "cga_usja2"
+    },
+    {
+      "id": "cga_usja_main"
+    },
+    {
+      "id": "cga_14u"
+    },
+    {
+      "id": "cga_dog"
+    },
+    {
+      "id": "cga_dogq1"
+    },
+    {
+      "id": "cga_dogq2"
+    },
+    {
+      "id": "cga_dogq3"
+    },
+    {
+      "id": "cga1",
+      "regDeadline": "Registration Open"
+    },
+    {
+      "id": "cga2"
+    },
+    {
+      "id": "cga3"
+    },
+    {
+      "id": "cga4"
+    },
+    {
+      "id": "cga5"
+    },
+    {
+      "id": "cga6"
+    },
+    {
+      "id": "usga_uo1"
+    },
+    {
+      "id": "usga_uo2"
+    },
+    {
+      "id": "usga_uo3"
+    },
+    {
+      "id": "usga_uo4"
+    },
+    {
+      "id": "usga_uo5"
+    },
+    {
+      "id": "usga_uo6"
+    },
+    {
+      "id": "usga_ua1"
+    },
+    {
+      "id": "usga_ua2"
+    },
+    {
+      "id": "usga_ua3"
+    },
+    {
+      "id": "usga_uja1"
+    },
+    {
+      "id": "usga_uja2"
+    }
+  ]
 }

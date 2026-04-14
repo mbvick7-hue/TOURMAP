@@ -1,1 +1,20 @@
-[]
+[
+  {
+    "source": "GolfGenius",
+    "name": "Back to Directory",
+    "tour": "TYGA",
+    "series": "Open",
+    "link": "https://cga.golfgenius.com/ggid/cga/page/3936922",
+    "state": "NC",
+    "scraped_at": "2026-04-14"
+  },
+  {
+    "source": "GolfGenius",
+    "name": "Click Here for Estimated Course Setup and Yardages",
+    "tour": "TYGA",
+    "series": "Open",
+    "link": "https://cga.golfgenius.com/pages/5689128",
+    "state": "NC",
+    "scraped_at": "2026-04-14"
+  }
+]
