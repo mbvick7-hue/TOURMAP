@@ -616,6 +616,142 @@ async def discover_golfgenius(page, known_links: set) -> list[dict]:
 
 
 # ══════════════════════════════════════════════════════════════════════════════
+# SCJGT — Playwright (BlueGolf, blocks httpx)
+# ══════════════════════════════════════════════════════════════════════════════
+
+SCJGT_SCHEDULE_URL = "https://scjga.bluegolf.com/bluegolfw/scjga26/schedule/index.htm"
+
+async def scrape_scjgt(page, all_tournaments: list) -> list[dict]:
+    """
+    Scrapes the SCJGT BlueGolf schedule page once to:
+    - Find each event's individual URL (leaderboard.htm for past, index.htm for upcoming)
+    - Extract registration deadlines
+    - Pull results for completed events
+    Returns a list of patch dicts keyed by tournament id.
+    """
+    updates = []
+    scjgt_tournaments = [t for t in all_tournaments if t.get("tour") == "SCJGT"]
+    if not scjgt_tournaments:
+        return updates
+
+    try:
+        await page.goto(SCJGT_SCHEDULE_URL, wait_until="networkidle", timeout=TIMEOUT)
+
+        # BlueGolf schedule pages list events as links — grab all event index links
+        event_links = await page.eval_on_selector_all(
+            "a[href*='/event/']",
+            """els => els.map(e => ({
+                href: e.href,
+                text: e.innerText.trim()
+            }))"""
+        )
+
+        # Build a map of event href base -> full URL
+        # BlueGolf event URLs look like: .../event/scjga26XX/index.htm
+        # Leaderboard is at: .../event/scjga26XX/leaderboard.htm
+        event_map = {}  # name fragment -> {index_url, leaderboard_url, event_id}
+        for lnk in event_links:
+            href = lnk.get("href", "")
+            text = clean(lnk.get("text", ""))
+            m = re.search(r"/event/([^/]+)/", href)
+            if not m or not text:
+                continue
+            event_id = m.group(1)
+            base = href.rsplit("/", 1)[0]
+            event_map[text.lower()] = {
+                "event_id":      event_id,
+                "index_url":     f"{base}/index.htm",
+                "leaderboard_url": f"{base}/leaderboard.htm",
+                "text":          text,
+            }
+
+        # Match each SCJGT tournament to its event entry by name similarity
+        for t in scjgt_tournaments:
+            tid      = t["id"]
+            tname    = t.get("name", "").lower()
+            best_match = None
+            best_score = 0
+
+            for key, info in event_map.items():
+                # Score based on word overlap
+                t_words = set(re.findall(r"[a-z]+", tname))
+                k_words = set(re.findall(r"[a-z]+", key))
+                common  = t_words & k_words
+                score   = len(common)
+                if score > best_score:
+                    best_score = score
+                    best_match = info
+
+            if not best_match or best_score < 2:
+                continue
+
+            is_past = t.get("end", "") < TODAY
+            event_url = best_match["leaderboard_url"] if is_past else best_match["index_url"]
+
+            # Scrape the individual event page
+            try:
+                await asyncio.sleep(DELAY)
+                await page.goto(event_url, wait_until="domcontentloaded", timeout=TIMEOUT)
+                body = await page.inner_text("body")
+
+                patch = {"id": tid, "link": event_url}
+
+                # Registration deadline
+                deadline = None
+                if re.search(r"registration\s+(is\s+)?closed|event\s+full", body, re.I):
+                    deadline = "Registration Closed"
+                else:
+                    opens = re.search(
+                        r"(?:registration\s+)?opens?\s+(?:on\s+)?"
+                        r"((?:Jan|Feb|Mar|Apr|May|Jun|Jul|Aug|Sep|Oct|Nov|Dec)"
+                        r"[a-z]*\.?\s+\d{1,2}(?:,?\s*\d{4})?)",
+                        body, re.I)
+                    if opens:
+                        d = fmt_date(opens.group(1))
+                        deadline = f"Opens {d}" if d else None
+                    if not deadline:
+                        closes = re.search(
+                            r"(?:closes?|deadline)[:\s]+"
+                            r"((?:Jan|Feb|Mar|Apr|May|Jun|Jul|Aug|Sep|Oct|Nov|Dec)"
+                            r"[a-z]*\.?\s+\d{1,2}(?:,?\s*\d{4})?)",
+                            body, re.I)
+                        if closes:
+                            d = fmt_date(closes.group(1))
+                            deadline = f"Closes {d}" if d else None
+                    if not deadline and re.search(r"register\s+now|add\s+to\s+cart|click\s+to\s+register", body, re.I):
+                        deadline = "Registration Open"
+
+                if deadline:
+                    patch["regDeadline"] = deadline
+
+                # Results for past events
+                if is_past:
+                    rows = await page.query_selector_all("table tr")
+                    parsed = []
+                    for row in rows[:30]:
+                        cells = await row.query_selector_all("td")
+                        if len(cells) < 3:
+                            continue
+                        texts = [clean(await c.inner_text()) for c in cells]
+                        if not re.match(r"^\d{1,3}[TE]?$", texts[0]):
+                            continue
+                        parsed.append({"place": texts[0], "name": texts[1], "score": texts[2]})
+                    if parsed:
+                        patch["results"] = parsed[:20]
+
+                updates.append(patch)
+                print(f"  SCJGT {tid} → {event_url.split('/')[-2]} | deadline={patch.get('regDeadline')} | results={len(patch.get('results', []))}")
+
+            except Exception as e:
+                print(f"  ERROR SCJGT {tid}: {e}", file=sys.stderr)
+
+    except Exception as e:
+        print(f"  ERROR SCJGT schedule: {e}", file=sys.stderr)
+
+    return updates
+
+
+# ══════════════════════════════════════════════════════════════════════════════
 # Router
 # ══════════════════════════════════════════════════════════════════════════════
 
@@ -707,6 +843,12 @@ async def main():
         all_discovered.extend(gg_d)
         print(f"  {len(gg_d)} potential new events")
 
+        print("\n── SCJGT (schedule scrape) ──")
+        scjgt_updates = await scrape_scjgt(page, all_tournaments)
+        for u in scjgt_updates:
+            results_by_id.setdefault(u["id"], {}).update(u)
+        print(f"  {len(scjgt_updates)} SCJGT events updated")
+
         await browser.close()
 
     # ── Write tournament_data.json ─────────────────────────────────────────────
@@ -744,3 +886,4 @@ async def main():
 
 if __name__ == "__main__":
     asyncio.run(main())
+
