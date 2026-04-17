@@ -1,5 +1,5 @@
 {
-  "scraped_at": "2026-04-16T16:23:55.163594+00:00",
+  "scraped_at": "2026-04-17T14:57:51.968529+00:00",
   "tournaments": [
     {
       "id": "h1"
@@ -245,7 +245,8 @@
       "id": "t_oh2"
     },
     {
-      "id": "cga_hvq"
+      "id": "cga_hvq",
+      "regDeadline": "Registration Open"
     },
     {
       "id": "t_al1"
@@ -714,6 +715,30 @@
       "id": "usga_uja2"
     },
     {
+      "id": "usga_uja3"
+    },
+    {
+      "id": "usga_gj1"
+    },
+    {
+      "id": "usga_ua4"
+    },
+    {
+      "id": "usga_ua5"
+    },
+    {
+      "id": "usga_ua6"
+    },
+    {
+      "id": "usga_ua7"
+    },
+    {
+      "id": "usga_ua8"
+    },
+    {
+      "id": "usga_wa1"
+    },
+    {
       "id": "a8q"
     },
     {
@@ -745,9 +770,6 @@
     },
     {
       "id": "pkbgt_nc7"
-    },
-    {
-      "id": "pkbgt_nc8"
     },
     {
       "id": "pkbgt_nc9"
@@ -1152,9 +1174,6 @@
       "id": "other_va9"
     },
     {
-      "id": "bjgt_va3"
-    },
-    {
       "id": "lanto_va6"
     },
     {
@@ -1201,6 +1220,102 @@
     },
     {
       "id": "other_va16"
+    },
+    {
+      "id": "jgnc_nc1"
+    },
+    {
+      "id": "jgnc_nc2"
+    },
+    {
+      "id": "jgnc_nc3"
+    },
+    {
+      "id": "jgnc_nc4"
+    },
+    {
+      "id": "jgnc_nc5"
+    },
+    {
+      "id": "jgnc_nc6"
+    },
+    {
+      "id": "jgnc_nc7"
+    },
+    {
+      "id": "jgnc_nc8"
+    },
+    {
+      "id": "jgnc_nc9"
+    },
+    {
+      "id": "jgnc_nc10"
+    },
+    {
+      "id": "jgnc_nc11"
+    },
+    {
+      "id": "jgnc_nc12"
+    },
+    {
+      "id": "jgnc_nc13"
+    },
+    {
+      "id": "jgnc_va1"
+    },
+    {
+      "id": "jgnc_va2"
+    },
+    {
+      "id": "jgnc_va3"
+    },
+    {
+      "id": "jgnc_va4"
+    },
+    {
+      "id": "jgnc_va5"
+    },
+    {
+      "id": "jgnc_va6"
+    },
+    {
+      "id": "jgnc_va7"
+    },
+    {
+      "id": "jgnc_va8"
+    },
+    {
+      "id": "jgnc_va9"
+    },
+    {
+      "id": "jgnc_sc1"
+    },
+    {
+      "id": "ajgo_ga1"
+    },
+    {
+      "id": "ajgo_ga2"
+    },
+    {
+      "id": "ajgo_ga3"
+    },
+    {
+      "id": "ajgo_ga4"
+    },
+    {
+      "id": "ajgo_ga5"
+    },
+    {
+      "id": "ajgo_ga6"
+    },
+    {
+      "id": "jgnc_ga1"
+    },
+    {
+      "id": "jgnc_ga2"
+    },
+    {
+      "id": "jgnc_ga3"
     },
     {
       "id": "ga1"
@@ -1389,9 +1504,6 @@
       "id": "ga62"
     },
     {
-      "id": "ga63"
-    },
-    {
       "id": "ga64"
     },
     {
@@ -1488,10 +1600,19 @@
       "id": "ga95"
     },
     {
-      "id": "ga96"
+      "id": "ga97"
     },
     {
-      "id": "ga97"
+      "id": "ga98"
+    },
+    {
+      "id": "ga99"
+    },
+    {
+      "id": "ga100"
+    },
+    {
+      "id": "ga101"
     }
   ]
 }
